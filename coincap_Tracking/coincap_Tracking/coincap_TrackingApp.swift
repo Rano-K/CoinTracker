@@ -11,7 +11,7 @@ import SwiftUI
 struct coincap_TrackingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashBoard()
         }
     }
 }
