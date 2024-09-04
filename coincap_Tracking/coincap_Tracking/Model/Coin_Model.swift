@@ -12,6 +12,10 @@ struct CoinStore : Codable{
     var timestamp : Int
 }
 
+struct CoinQuery : Codable{
+    var data : Coin
+}
+
 
 struct Coin : Hashable, Codable, Identifiable{
     var id: String
