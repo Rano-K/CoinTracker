@@ -28,7 +28,7 @@ struct Coin : Hashable, Codable, Identifiable{
     var volume : Double
     var price : Double
     var changePercent : Double
-    var explorer : String?
+//    var explorer : String?
     
     enum CodingKeys : String, CodingKey{
         case id
@@ -37,11 +37,11 @@ struct Coin : Hashable, Codable, Identifiable{
         case name
         case supply
         case maxSupply
-        case marketCap = "markeyCapUsd"
+        case marketCap = "marketCapUsd"
         case volume = "volumeUsd24Hr"
         case price = "priceUsd"
         case changePercent = "changePercent24Hr"
-        case explorer
+//        case explorer
     }
 //    "data": [
 //    {
@@ -57,7 +57,7 @@ struct Coin : Hashable, Codable, Identifiable{
 //      "changePercent24Hr": "-0.8101417214350335",     Double
 //      "vwap24Hr": "7175.0663247679233209"             Double
 //    },
-    
+//    
     init(from decoder: any Decoder) throws {
         
         //container는 JSON으로 부터 받아온 데이터를 저장할 곳
@@ -89,9 +89,6 @@ struct Coin : Hashable, Codable, Identifiable{
         let changePercentStr = try container.decode(String.self, forKey: .changePercent)
         self.changePercent = Double(changePercentStr) ?? 0.0
         
-        self.explorer = try container.decodeIfPresent(String.self, forKey: .explorer)
+//        self.explorer = try container.decode(String.self, forKey: .explorer)
     }
-    
-    
-    
 }
