@@ -12,7 +12,16 @@ struct coincap_TrackingApp: App {
     var body: some Scene {
         WindowGroup {
 //            DashBoard()
-            ContentView()
+            TabView{
+                DashBoard()
+                    .tabItem{
+                        Text("1")
+                    }
+                ContentView()
+                    .tabItem{
+                        Text("2")
+                    }
+            }
         }
     }
 }
