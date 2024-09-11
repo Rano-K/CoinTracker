@@ -16,8 +16,6 @@ struct DashBoard: View {
     
     @State private var coins : [Coin] = []
     @State private var priceChange : [Bool] = [] //바뀌는 항목들 넣어서 true만들고 해당 변화에 대한 항목들 넣어줄 곳
-    //화면 dark모드
-    @State private var isBright : Bool = false
     
     //Grid를 그리는데 여기에 적힌 순서대로 작성된다.
     private var gridItemLayout = [ GridItem(.fixed(50)),
@@ -82,21 +80,12 @@ struct DashBoard: View {
                                 .gridCellColumns(4)
                         }
                     }header: {
-//                        VStack(alignment: .center, content: {
-//                            Text("새로고침하시려면 끌어 당겨주세요")
-//                        })
+                    
                     }
                 }
             }
             .listStyle(.plain)
             .navigationTitle("Coin Tracker")
-            .toolbar(content: {
-                Button(action: {
-                    isBright.toggle()
-                }, label: {
-                    Image(systemName: isBright ? "lightbulb.fill" : "lightbulb.slash")
-                })
-            })
             .navigationBarTitleDisplayMode(.inline)
             .contentMargins(10, for: .scrollContent)
             
@@ -104,28 +93,26 @@ struct DashBoard: View {
         .task {
             //NavigationStack에 Rest API를 씌우기
             
-            //RESTAPI 호출 -> coins 배열을 생성해 priceChange를 통해 해당 항목만큼 배열 생성
+            //RESTAPI 호출
             coins = await coinService.quoteAllCoins() ?? []
-            //가격 변동이 발생했을 때 true로 변경해 색깔이 바뀌어야 함을 표시.
             priceChange = .init(repeating: false, count: coins.count)
             print(":::::RestAPI호출:::::")
-            print(":::::갯수 : \(coins.count):::::")
             
             //호출한 내용 update
             await coinWebSocket.connect()
             print(":::::coinWebSocket Connect:::::")
         }
-//        .refreshable {
-//            coins = await coinService.quoteAllCoins() ?? []
-//            print("(:::::refreshable:::::")
-//        }
+        .refreshable {
+            coins = await coinService.quoteAllCoins() ?? []
+            print("(:::::refreshable:::::")
+        }
         .onChange(of: coinWebSocket.coins){ oldValue, newValue in
             newValue?.forEach({ coin in
                 updateCoinPrice(coin: coin)
                 print(":::::coin update:::::")
             })
         }
-        .preferredColorScheme(isBright ? .light : .dark)
+        .preferredColorScheme(.dark)
     }
     
     private func updateCoinPrice(coin : [String : Double]){ //coin : CoinWebSocketService에서 받아온 coin
