@@ -30,6 +30,7 @@ struct ContentView: View {
         ScrollView(.vertical){
             LazyVGrid(columns: rows, alignment: .center, content: {
                 Section{
+//                LazyVStack{
                     ForEach((0...10001), id:\.self){_ in
                         Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1))
                             .frame(width: 100, height: 100)
