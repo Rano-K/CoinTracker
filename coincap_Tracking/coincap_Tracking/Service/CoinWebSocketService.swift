@@ -34,6 +34,18 @@ class CoinWebSocketService{
         }catch{
             print("Fail")
         }
+    }//connect() END
+    
+    
+    func disconnect(){
+        webSocketTask?.cancel(with: .goingAway, reason: .none)
+        webSocketTask = nil
+    }
+    
+    
+    private func reconnect() async {
+        disconnect()
+        await connect()
     }
     
     //receive()
@@ -44,7 +56,7 @@ class CoinWebSocketService{
         
         switch response{
         case .string(let text) :
-            print("Received CoinPrice: \(text)")
+            print("Received text: \(text)")
             
             if let data = text.data(using: .utf8),
                let coinPair = try JSONSerialization.jsonObject(with: data) as? [String : String]{
@@ -66,18 +78,4 @@ class CoinWebSocketService{
         //message이어받기
         try await receive()
     }//recieve() END
-    
-
-    
-    func disconnect(){
-        webSocketTask?.cancel(with: .goingAway, reason: .none)
-        webSocketTask = nil
-    }
-    
-    private func reconnect() async {
-        disconnect()
-        await connect()
-    }
-    
-    
 }
