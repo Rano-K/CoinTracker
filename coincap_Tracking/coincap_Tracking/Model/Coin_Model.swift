@@ -6,12 +6,12 @@
 //
 
 import Foundation
-
+//모든 정보 담아올 곳
 struct CoinStore : Codable{
     var data : [Coin]
     var timestamp : Int
 }
-
+//특정정보 담길 곳
 struct CoinQuery : Codable{
     var data : Coin
 }
@@ -60,7 +60,7 @@ struct Coin : Hashable, Codable, Identifiable{
 //    
     init(from decoder: any Decoder) throws {
         
-        //container는 JSON으로 부터 받아온 데이터를 저장할 곳
+        //container는 JSON으로 부터 받아온 데이터를 저장할 곳 -> SwiftData에 mapping해야됨.
         let container = try decoder.container(keyedBy: CodingKeys.self)
         //container로 부터 Decoding해올 것
         
