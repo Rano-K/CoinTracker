@@ -19,13 +19,18 @@ struct DashBoard: View {
     //화면 dark모드
     @State private var isBright : Bool = false
     
+    //DetailView로 넘기기
+    ///showDetailView로 모달뷰를 띄울 때 true로 바꿔준다.
+    @State var showDetailView : Bool = false
+    @State var selectedCoinID : String = ""
+    
     //Grid를 그리는데 여기에 적힌 순서대로 작성된다.
     private var gridItemLayout = [ GridItem(.fixed(50)),
                                    GridItem(.flexible(minimum: 120, maximum: 200)),
                                    GridItem(.flexible()),
                                    GridItem(.flexible())
     ]
-    
+         
     
     var body: some View {
         NavigationStack{
@@ -49,15 +54,24 @@ struct DashBoard: View {
                 
                 Grid(alignment: .leading, horizontalSpacing: 10, verticalSpacing: 15){
                     
-                    Section{
+                    Section {
+                        
                         ForEach(0..<coins.count, id: \.self){ index in
                             GridRow(alignment: .firstTextBaseline){
                                 
+                                
                                 Text(coins[index].rank)
+                                
                                 
                                 VStack(alignment: .leading){
                                     Text(coins[index].name)
                                         .fontWeight(.medium)
+                                        .onTapGesture(perform: {
+                                            
+                                            selectedCoinID = coins[index].id
+                                            showDetailView.toggle()
+                                            
+                                        })
                                     
                                     Text(coins[index].symbol)
                                         .foregroundStyle(.secondary)
@@ -75,16 +89,16 @@ struct DashBoard: View {
                                     .foregroundStyle(coins[index].changePercent > 0.0 ? .green : .red)
                                 
                             }
-                            //Rectangle()
+                            //구분선 표시
                             Rectangle()
                                 .fill(.tertiary)
                                 .frame(height: 1)
                                 .gridCellColumns(4)
                         }
+                        
                     }header: {
-//                        VStack(alignment: .center, content: {
-//                            Text("새로고침하시려면 끌어 당겨주세요")
-//                        })
+                        Text("CoinCap API")
+                            .font(.title)
                     }
                 }
             }
@@ -125,6 +139,9 @@ struct DashBoard: View {
                 print(":::::coin update:::::")
             })
         }
+        .sheet(isPresented: $showDetailView, content: {
+            DetailView(selectedId: selectedCoinID)
+        })
         .preferredColorScheme(isBright ? .light : .dark)
     }
     
