@@ -14,6 +14,7 @@ class CoinRestfulService_assets {
         
         var queryUrl = coinStoreUrl
         
+        //받아올 coin갯수 제한. 너무 많으면 터진다. 일단 limit 없이 설정
         if limit > 0 {
             queryUrl += "?limit=\(limit)"
         }
