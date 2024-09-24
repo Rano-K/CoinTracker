@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct CoinDetailView: View {
+struct DetailView: View {
+    
+    var selectedId : String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text(selectedId)
+        }
     }
 }
 
-#Preview {
-    CoinDetailView()
-}
