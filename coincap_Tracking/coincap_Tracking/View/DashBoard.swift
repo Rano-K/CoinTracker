@@ -18,6 +18,12 @@ struct DashBoard: View {
     @State private var priceChange : [Bool] = [] //바뀌는 항목들 넣어서 true만들고 해당 변화에 대한 항목들 넣어줄 곳
     //화면 dark모드
     @State private var isBright : Bool = false
+    //달라 표시 원화 표시
+    @State private var isDollar : Bool = true
+    private var priceIcon : String{
+        return isDollar ? "$" : "₩"
+    } //isDollar :true = 달라, isDollar :false = 원화
+//    "$" "₩"
     
     //DetailView로 넘기기
     ///showDetailView로 모달뷰를 띄울 때 true로 바꿔준다.
@@ -26,7 +32,7 @@ struct DashBoard: View {
     
     //Grid를 그리는데 여기에 적힌 순서대로 작성된다.
     private var gridItemLayout = [ GridItem(.fixed(50)),
-                                   GridItem(.flexible(minimum: 120, maximum: 200)),
+                                   GridItem(.flexible(minimum: 150, maximum: 200)),
                                    GridItem(.flexible()),
                                    GridItem(.flexible())
     ]
@@ -37,6 +43,7 @@ struct DashBoard: View {
             //TopView Start
             HStack{
                 Text("순위")
+                    .padding(.trailing, 12)
                 Text("이름")
                 Spacer()
                 Text("가격")
@@ -77,7 +84,7 @@ struct DashBoard: View {
                                         .foregroundStyle(.secondary)
                                 }
                                 
-                                Text("\(coins[index].price.formatted(.number.precision(.fractionLength(coins[index].price < 1.0 ? 6 : 2))))")
+                                Text("\(coins[index].price.formatted(.number.precision(.fractionLength(coins[index].price < 1.0 ? 6 : 2)))) \(priceIcon)")
                                     .fontWeight(.medium)
                                     .gridColumnAlignment(.trailing)
                                     .padding(5)
@@ -106,10 +113,22 @@ struct DashBoard: View {
             .navigationTitle("Coin Tracker")
             .toolbar(content: {
                 Button(action: {
+                    isDollar.toggle()
+                }, label: {
+                    Image(systemName: isDollar ? "dollarsign" : "wonsign")
+                        .frame(width: 10)
+                })
+                
+                Button(action: {
                     isBright.toggle()
                 }, label: {
                     Image(systemName: isBright ? "lightbulb.fill" : "lightbulb.slash")
+                        
                 })
+                
+                
+                
+                
             })
             .navigationBarTitleDisplayMode(.inline)
             .contentMargins(10, for: .scrollContent)
@@ -136,13 +155,13 @@ struct DashBoard: View {
         .onChange(of: coinWebSocket.coins){ oldValue, newValue in
             newValue?.forEach({ coin in
                 updateCoinPrice(coin: coin)
-                print(":::::coin update:::::")
+//                print(":::::coin update:::::")
             })
         }
         .sheet(isPresented: $showDetailView, content: {
             DetailView(selectedId: selectedCoinID)
         })
-        .preferredColorScheme(isBright ? .light : .dark)
+        .preferredColorScheme(isBright ? .light : .dark) // 테마 바꾸기
     }
     
     private func updateCoinPrice(coin : [String : Double]){ //coin : CoinWebSocketService에서 받아온 coin
