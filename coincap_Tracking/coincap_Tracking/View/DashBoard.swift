@@ -22,11 +22,9 @@ struct DashBoard: View {
     @State private var isDollar : Bool = true
     private var priceIcon : String{
         return isDollar ? "$" : "₩"
-    } //isDollar :true = 달라, isDollar :false = 원화
-//    "$" "₩"
+    }
     
     //DetailView로 넘기기
-    ///showDetailView로 모달뷰를 띄울 때 true로 바꿔준다.
     @State var showDetailView : Bool = false
     @State var selectedCoinID : String = ""
     
