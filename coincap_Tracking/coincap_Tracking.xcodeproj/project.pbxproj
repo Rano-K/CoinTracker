@@ -7,26 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66AFCC0F2C81D5B4005ECA72 /* CoinRestfulService_assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AFCC0E2C81D5B4005ECA72 /* CoinRestfulService_assets.swift */; };
+		660368472C918EC3009D30EA /* CoinRestfulService_assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660368462C918EC3009D30EA /* CoinRestfulService_assets.swift */; };
+		666D8A4C2C8DD3DC00A56D9E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666D8A4B2C8DD3DC00A56D9E /* Launch Screen.storyboard */; };
+		666D8A4E2C8EA83300A56D9E /* - Trades_CoinWebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D8A4D2C8EA83300A56D9E /* - Trades_CoinWebSocketService.swift */; };
 		66CCFACF2C74B56300A04953 /* coincap_TrackingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCFACE2C74B56300A04953 /* coincap_TrackingApp.swift */; };
 		66CCFAD12C74B56300A04953 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCFAD02C74B56300A04953 /* ContentView.swift */; };
 		66CCFAD32C74B56500A04953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CCFAD22C74B56500A04953 /* Assets.xcassets */; };
 		66CCFAD62C74B56500A04953 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CCFAD52C74B56500A04953 /* Preview Assets.xcassets */; };
 		66CCFADD2C74B61800A04953 /* Coin_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCFADC2C74B61800A04953 /* Coin_Model.swift */; };
-		66CCFAE02C7DB3F100A04953 /* - Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCFADF2C7DB3F100A04953 /* - Currency.swift */; };
+		66CCFAE02C7DB3F100A04953 /* Currency_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCFADF2C7DB3F100A04953 /* Currency_Model.swift */; };
+		66D710012C9423980046FAD5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D710002C9423980046FAD5 /* DetailView.swift */; };
+		66D710042C943B020046FAD5 /* CurrencyRestfulService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D710032C943B020046FAD5 /* CurrencyRestfulService.swift */; };
 		66EE982A2C887B1600E88B55 /* DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE98292C887B1600E88B55 /* DashBoard.swift */; };
 		66EE982C2C88893100E88B55 /* CoinWebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE982B2C88893100E88B55 /* CoinWebSocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		66AFCC0E2C81D5B4005ECA72 /* CoinRestfulService_assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRestfulService_assets.swift; sourceTree = "<group>"; };
+		660368462C918EC3009D30EA /* CoinRestfulService_assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRestfulService_assets.swift; sourceTree = "<group>"; };
+		666D8A4B2C8DD3DC00A56D9E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		666D8A4D2C8EA83300A56D9E /* - Trades_CoinWebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "- Trades_CoinWebSocketService.swift"; sourceTree = "<group>"; };
 		66CCFACB2C74B56300A04953 /* coincap_Tracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coincap_Tracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CCFACE2C74B56300A04953 /* coincap_TrackingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coincap_TrackingApp.swift; sourceTree = "<group>"; };
 		66CCFAD02C74B56300A04953 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		66CCFAD22C74B56500A04953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66CCFAD52C74B56500A04953 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		66CCFADC2C74B61800A04953 /* Coin_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin_Model.swift; sourceTree = "<group>"; };
-		66CCFADF2C7DB3F100A04953 /* - Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "- Currency.swift"; sourceTree = "<group>"; };
+		66CCFADF2C7DB3F100A04953 /* Currency_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency_Model.swift; sourceTree = "<group>"; };
+		66D710002C9423980046FAD5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		66D710032C943B020046FAD5 /* CurrencyRestfulService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRestfulService.swift; sourceTree = "<group>"; };
 		66EE98292C887B1600E88B55 /* DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoard.swift; sourceTree = "<group>"; };
 		66EE982B2C88893100E88B55 /* CoinWebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinWebSocketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,8 +53,10 @@
 		66AFCC0D2C81D54C005ECA72 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				66AFCC0E2C81D5B4005ECA72 /* CoinRestfulService_assets.swift */,
+				660368462C918EC3009D30EA /* CoinRestfulService_assets.swift */,
 				66EE982B2C88893100E88B55 /* CoinWebSocketService.swift */,
+				666D8A4D2C8EA83300A56D9E /* - Trades_CoinWebSocketService.swift */,
+				66D710032C943B020046FAD5 /* CurrencyRestfulService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -70,6 +80,7 @@
 		66CCFACD2C74B56300A04953 /* coincap_Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				666D8A4B2C8DD3DC00A56D9E /* Launch Screen.storyboard */,
 				66EE98282C887AFE00E88B55 /* View */,
 				66AFCC0D2C81D54C005ECA72 /* Service */,
 				66CCFADE2C74B62100A04953 /* Model */,
@@ -93,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				66CCFADC2C74B61800A04953 /* Coin_Model.swift */,
-				66CCFADF2C7DB3F100A04953 /* - Currency.swift */,
+				66CCFADF2C7DB3F100A04953 /* Currency_Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				66EE98292C887B1600E88B55 /* DashBoard.swift */,
+				66D710002C9423980046FAD5 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666D8A4C2C8DD3DC00A56D9E /* Launch Screen.storyboard in Resources */,
 				66CCFAD62C74B56500A04953 /* Preview Assets.xcassets in Resources */,
 				66CCFAD32C74B56500A04953 /* Assets.xcassets in Resources */,
 			);
@@ -178,10 +191,13 @@
 			files = (
 				66EE982A2C887B1600E88B55 /* DashBoard.swift in Sources */,
 				66EE982C2C88893100E88B55 /* CoinWebSocketService.swift in Sources */,
-				66CCFAE02C7DB3F100A04953 /* - Currency.swift in Sources */,
+				666D8A4E2C8EA83300A56D9E /* - Trades_CoinWebSocketService.swift in Sources */,
+				660368472C918EC3009D30EA /* CoinRestfulService_assets.swift in Sources */,
+				66D710042C943B020046FAD5 /* CurrencyRestfulService.swift in Sources */,
+				66CCFAE02C7DB3F100A04953 /* Currency_Model.swift in Sources */,
+				66D710012C9423980046FAD5 /* DetailView.swift in Sources */,
 				66CCFAD12C74B56300A04953 /* ContentView.swift in Sources */,
 				66CCFACF2C74B56300A04953 /* coincap_TrackingApp.swift in Sources */,
-				66AFCC0F2C81D5B4005ECA72 /* CoinRestfulService_assets.swift in Sources */,
 				66CCFADD2C74B61800A04953 /* Coin_Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -298,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -313,17 +329,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"coincap_Tracking/Preview Content\"";
 				DEVELOPMENT_TEAM = 8489U7SJ7U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +351,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.rano.coincap-Tracking";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,17 +366,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"coincap_Tracking/Preview Content\"";
 				DEVELOPMENT_TEAM = 8489U7SJ7U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,6 +388,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift.rano.coincap-Tracking";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
