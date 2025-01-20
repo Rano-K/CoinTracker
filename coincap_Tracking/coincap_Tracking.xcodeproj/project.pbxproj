@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		660368472C918EC3009D30EA /* CoinRestfulService_assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660368462C918EC3009D30EA /* CoinRestfulService_assets.swift */; };
+		66515B722CE6014E0035549A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66515B712CE6014A0035549A /* TestView.swift */; };
 		666D8A4C2C8DD3DC00A56D9E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666D8A4B2C8DD3DC00A56D9E /* Launch Screen.storyboard */; };
 		666D8A4E2C8EA83300A56D9E /* - Trades_CoinWebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D8A4D2C8EA83300A56D9E /* - Trades_CoinWebSocketService.swift */; };
 		66CCFACF2C74B56300A04953 /* coincap_TrackingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCFACE2C74B56300A04953 /* coincap_TrackingApp.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		660368462C918EC3009D30EA /* CoinRestfulService_assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRestfulService_assets.swift; sourceTree = "<group>"; };
+		66515B712CE6014A0035549A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		666D8A4B2C8DD3DC00A56D9E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		666D8A4D2C8EA83300A56D9E /* - Trades_CoinWebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "- Trades_CoinWebSocketService.swift"; sourceTree = "<group>"; };
 		66CCFACB2C74B56300A04953 /* coincap_Tracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coincap_Tracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 				66CCFADE2C74B62100A04953 /* Model */,
 				66CCFACE2C74B56300A04953 /* coincap_TrackingApp.swift */,
 				66CCFAD02C74B56300A04953 /* ContentView.swift */,
+				66515B712CE6014A0035549A /* TestView.swift */,
 				66CCFAD22C74B56500A04953 /* Assets.xcassets */,
 				66CCFAD42C74B56500A04953 /* Preview Content */,
 			);
@@ -192,6 +195,7 @@
 				66EE982A2C887B1600E88B55 /* DashBoard.swift in Sources */,
 				66EE982C2C88893100E88B55 /* CoinWebSocketService.swift in Sources */,
 				666D8A4E2C8EA83300A56D9E /* - Trades_CoinWebSocketService.swift in Sources */,
+				66515B722CE6014E0035549A /* TestView.swift in Sources */,
 				660368472C918EC3009D30EA /* CoinRestfulService_assets.swift in Sources */,
 				66D710042C943B020046FAD5 /* CurrencyRestfulService.swift in Sources */,
 				66CCFAE02C7DB3F100A04953 /* Currency_Model.swift in Sources */,

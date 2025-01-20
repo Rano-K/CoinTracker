@@ -11,7 +11,13 @@ struct DashBoard: View {
     
     private var coinService = CoinRestfulService_assets()
     private var coinWebSocket = CoinWebSocketService()
-    //추후Test
+
+//****************환율 정보 넣기 - 안되면 삭제하기****************
+    private var currencyService = CurrencyRestfulService()
+    @State private var currencyKRW : [Currency] = []
+    
+    
+//추후Test
 //    private var Trades_coinWebSocket = Trades_CoinWebSocketService()
     
     @State private var coins : [Coin] = []
@@ -82,13 +88,22 @@ struct DashBoard: View {
                                         .foregroundStyle(.secondary)
                                 }
                                 
-                                Text("\(coins[index].price.formatted(.number.precision(.fractionLength(coins[index].price < 1.0 ? 6 : 2)))) \(priceIcon)")
+                                //가격 표시
+                                // 가격 포맷팅을 별도 변수로 분리
+                                let formattedPrice: String = {
+                                    let precision = coins[index].price < 1.0 ? 6 : 2
+                                    return coins[index].price.formatted(.number.precision(.fractionLength(precision)))
+                                }()
+
+                                // Text에 적용
+                                Text("\(formattedPrice) \(priceIcon)")
                                     .fontWeight(.medium)
                                     .gridColumnAlignment(.trailing)
                                     .padding(5)
-//                                    .background(priceChange[index] ? Color(red: 100/255, green: 100/255, blue: 100/255) : .clear)
                                     .background(priceChange[index] ? .yellow.opacity(0.5) : .clear)
+
                                 
+                                //변동폭
                                 Text((coins[index].changePercent/100).formatted(.percent.precision(.fractionLength(2))))
                                     .gridColumnAlignment(.trailing)
                                     .foregroundStyle(coins[index].changePercent > 0.0 ? .green : .red)
@@ -137,6 +152,11 @@ struct DashBoard: View {
             
             //RESTAPI 호출 -> coins 배열을 생성해 priceChange를 통해 해당 항목만큼 배열 생성
             coins = await coinService.quoteAllCoins() ?? []
+            //********환율정보 표시 - 안되면 삭제********
+//            currencyKRW = await currencyService.quote_KRW("south-korean-won")
+//            
+            //********안되면삭제 END********
+            
             //가격 변동이 발생했을 때 true로 변경해 색깔이 바뀌어야 함을 표시.
             priceChange = .init(repeating: false, count: coins.count)
             print(":::::RestAPI호출:::::")

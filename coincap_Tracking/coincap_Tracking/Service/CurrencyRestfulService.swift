@@ -34,12 +34,14 @@ class CurrencyRestfulService {
         return currency
     }
     
+    //원화 받아오기
     func quote_KRW(_ currencyId: String) async -> Currency?{
         
         guard let url = URL(string :currencyUrl + currencyId) else { return nil
         }
         
         var currency : Currency? = nil
+        
         do{
             let(data, _) = try await URLSession.shared.data(from: url)
             

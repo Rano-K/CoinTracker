@@ -21,6 +21,11 @@ struct coincap_TrackingApp: App {
                     .tabItem{
                         Text("2")
                     }
+                TestView()
+                    .tabItem{
+                        Text("Test")
+                    }
+                
             }
         }
     }
