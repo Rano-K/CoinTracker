@@ -24,7 +24,30 @@ API를 이용한 coin시세 Tracking앱<br><br>
   - 전체 코인 리스트 반환
   - limit : 가져올 코인 갯수 제한
   - 작동 방식 : URL생성 -> 네트워크 요청 -> JSON디코딩 -> Coin배열 반환
-  <img src = "https://drive.google.com/file/d/1yTtrPnz_JwXU-59Y7kDARA55yfAkUkrw/view?usp=drive_link" />
+  -----------------------------------------
+## OPTION
+```python
+{
+  "data": [
+    {
+      "id": "bitcoin",
+      "rank": "1",
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "supply": "17193925.0000000000000000",
+      "maxSupply": "21000000.0000000000000000",
+      "marketCapUsd": "119150835874.4699281625807300",
+      "volumeUsd24Hr": "2927959461.1750323310959460",
+      "priceUsd": "6929.8217756835584756",
+      "changePercent24Hr": "-0.8101417214350335",
+      "vwap24Hr": "7175.0663247679233209"
+    },
+    {
+      "id": "ethereum",
+      "rank": "2",
+      "symbol": "ETH",
+```
+
 - quote(_ coinId:)
   - 특정 코인데이터 반환
   - coinId : 코인의 고유 식별자
