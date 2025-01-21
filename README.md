@@ -7,7 +7,7 @@ API를 이용한 coin시세 Tracking앱<br><br>
 흑백 테마 변경 가능<br>
 
 ### 영상<a href="https://youtube.com/shorts/GF8x7Xl29nQ?feature=share">
-</a>
+
 ### Detail
 - Restful API, WebSocket을 APP에 연동<br>
   - RestfulAPI를 이용해 정적데이터를 수신, WebSocket을 이용해 실시간 데이터를 갱신
