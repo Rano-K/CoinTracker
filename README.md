@@ -6,8 +6,7 @@ API를 이용한 coin시세 Tracking앱<br><br>
 실시간 시가총액에 따른 순위 표시<br>
 흑백 테마 변경 가능<br>
 <a href="https://youtube.com/shorts/GF8x7Xl29nQ?feature=share">
-    <
-         alt="영상" class="custom-image">
+### 영상
 </a>
 
 <style>
