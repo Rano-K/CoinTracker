@@ -8,7 +8,7 @@ API를 이용한 coin시세 Tracking앱<br><br>
 
 ### <a href="https://youtube.com/shorts/GF8x7Xl29nQ?feature=share">영상</a>
 
-### Detail
+### 내용
 - Restful API, WebSocket을 APP에 연동<br>
   - RestfulAPI를 이용해 정적데이터를 수신, WebSocket을 이용해 실시간 데이터를 갱신
   - viewLogic구현
@@ -19,3 +19,13 @@ API를 이용한 coin시세 Tracking앱<br><br>
   - JSON형식 디코딩 후 main thread에서 UI업데이트
   - 연결 실패시 세션 닫고 리소스 해제, reconnect과정 구현
 
+### Detail
+- quoteAllCoins(limit:)
+  - 전체 코인 리스트 반환
+  - limit : 가져올 코인 갯수 제한
+  - 작동 방식 : URL생성 -> 네트워크 요청 -> JSON디코딩 -> Coin배열 반환
+  <a href ="https://drive.google.com/file/d/1yTtrPnz_JwXU-59Y7kDARA55yfAkUkrw/view?usp=drive_link">
+- quote(_ coinId:)
+  - 특정 코인데이터 반환
+  - coinId : 코인의 고유 식별자
+  - 
