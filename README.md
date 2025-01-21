@@ -25,7 +25,6 @@ API를 이용한 coin시세 Tracking앱<br><br>
   - limit : 가져올 코인 갯수 제한
   - 작동 방식 : URL생성 -> 네트워크 요청 -> JSON디코딩 -> Coin배열 반환
   -----------------------------------------
-## OPTION
 ```python
 {
   "data": [
@@ -46,6 +45,10 @@ API를 이용한 coin시세 Tracking앱<br><br>
       "id": "ethereum",
       "rank": "2",
       "symbol": "ETH",
+
+      ...
+
+
 ```
 
 - quote(_ coinId:)
