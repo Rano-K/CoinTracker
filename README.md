@@ -24,7 +24,7 @@ API를 이용한 coin시세 Tracking앱<br><br>
   - 전체 코인 리스트 반환
   - limit : 가져올 코인 갯수 제한
   - 작동 방식 : URL생성 -> 네트워크 요청 -> JSON디코딩 -> Coin배열 반환
-  <img src ="https://drive.google.com/file/d/1yTtrPnz_JwXU-59Y7kDARA55yfAkUkrw/view?usp=sharing" />
+  <img src = "https://drive.google.com/file/d/1yTtrPnz_JwXU-59Y7kDARA55yfAkUkrw/view?usp=drive_link" />
 - quote(_ coinId:)
   - 특정 코인데이터 반환
   - coinId : 코인의 고유 식별자
