@@ -8,8 +8,12 @@ API를 이용한 coin시세 Tracking앱<br><br>
 
 ### Detail
 - Restful API, WebSocket을 APP에 연동<br>
-  - WebSocket을 코인 거래데이터를 수신하는데 사용
-    - JSON형식 디코딩 후 main thread에서 UI업데이트
-    - 연결 실패시 세션 닫고 리소스 해제, reconnect과정 구현
-- Async/Await를 활용해 Thread블럭 방지
+  - RestfulAPI를 이용해 정적데이터를 수신, WebSocket을 이용해 실시간 데이터를 갱신
+  - viewLogic구현
+- Async/Await를 활용해 Thread블럭 방지<br>
+  - 네트워크 요청과 데이터 디코딩 작업을 비동기 처리
+  - Thread가 죽는걸 방지
+- WebSocket을 코인 거래데이터를 수신하는데 사용
+  - JSON형식 디코딩 후 main thread에서 UI업데이트
+  - 연결 실패시 세션 닫고 리소스 해제, reconnect과정 구현
 
